@@ -1,4 +1,5 @@
-FROM php:8.2-apache
+FROM php:8.1-apache
+
 
 RUN apt-get update && apt-get install -y \
     libzip-dev \
@@ -7,6 +8,8 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install zip
 
 RUN a2enmod rewrite
+
+WORKDIR /var/www/html
 
 COPY ./src /var/www/html/
 COPY ./src/.htaccess /var/www/html/.htaccess
@@ -19,5 +22,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
     && apt-get install -y nodejs
+
+EXPOSE 80
 
 CMD ["apache2-foreground"]
