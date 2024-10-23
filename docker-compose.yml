@@ -1,0 +1,9 @@
+services:
+  development:
+    build: .
+    container_name: pulpoline-frontend-development
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+
