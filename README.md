@@ -5,7 +5,7 @@
   <a href="https://nodejs.org/docs/latest-v20.x/api/index.html"><img src="https://img.shields.io/badge/node-20.x-green.svg" alt="node"/></a>
 </p>
 <p align="center">
-  <a href="https://bottom-timmie-mindstartups-df099d9f.koyeb.app/api/docs" target="_blank"><strong>DEMO Pulpoline Backend</strong></a>
+  <a href="https://starfish-app-leryq.ondigitalocean.app/" target="_blank"><strong>DEMO Pulpoline Frontend</strong></a>
 </p>
 
 ## Technologies Used
